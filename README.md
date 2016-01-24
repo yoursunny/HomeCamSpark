@@ -1,5 +1,12 @@
 # HomeCamSpark - home surveillance camera with Cisco Spark
 
+This is a home surveillance camera integrated with Cisco Spark.
+
+Features:
+
+* Motion detection: when the camera detects a motion, it will take a picture and send to the Spark room.
+* Speak: you may send text to the Spark room, and it will be spoken by the camera.
+
 ## Setup
 
 1. Download CiscoSpark on your mobile device, sign in with your personal account
@@ -15,6 +22,4 @@
 ## Usage
 
 1. Execute `./start-www.sh` to start a private web server to order to serve captured images
-2. Execute `motion -c motion.conf` to start motion capture; whenever a motion is detected, a picture will be sent to the Spark room
-3. From your mobile device, send text to the Spark room, and it will be spoken
-4. Press CTRL+C on `motion`, and execute `./stop-www.sh` to stop the service
+2. Press CTRL+C on `motion`, and execute `./stop-www.sh` to stop the service
