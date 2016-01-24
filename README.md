@@ -3,7 +3,7 @@
 ## Setup
 
 1. Download CiscoSpark on your mobile device, sign in with your personal account
-2. Install dependencies on Ubuntu 14.04: `apt-get install php5-cli motion`
+2. Install dependencies on Ubuntu 14.04: `apt-get install php5-cli motion festival`
 3. Sign in to <https://web.ciscospark.com> with a separate camera account
 4. Create a room with your personal account, and send an arbitrary message
 5. Log in to <https://developer.ciscospark.com>, copy access token, and paste in `accesstoken.txt`
@@ -15,5 +15,6 @@
 ## Usage
 
 1. Execute `./start-www.sh` to start a private web server to order to serve captured images
-2. Execute `motion -c motion.conf` to start motion capture; whenever a motion is detected, a picture will be sent to the Cisco Spark room chosen during setup
-3. Press CTRL+C on `motion`, and execute `./stop-www.sh` to stop the service
+2. Execute `motion -c motion.conf` to start motion capture; whenever a motion is detected, a picture will be sent to the Spark room
+3. From your mobile device, send text to the Spark room, and it will be spoken
+4. Press CTRL+C on `motion`, and execute `./stop-www.sh` to stop the service
