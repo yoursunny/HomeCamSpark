@@ -1,10 +1,10 @@
 <?php
-$accesstoken = file_get_contents('accesstoken.txt');
+$accesstoken = trim(file_get_contents('accesstoken.txt'));
 
 $context = stream_context_create(array(
   'http'=>array(
     'method'=>'GET',
-    'header'=>'Authorization: Bearer '.$accesstoken
+    'header'=>'Authorization: Bearer '.$accesstoken."\r\n"
   )
 ));
 $json = file_get_contents('https://api.ciscospark.com/v1/rooms', false, $context);
